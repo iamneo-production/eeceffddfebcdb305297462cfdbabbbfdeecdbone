@@ -8,8 +8,8 @@ terraform{
 }
 provider "aws"{
     region="Singapore"
-    access_key="my-access-key"
-    secret_key="my-secret-key"
+    access_key="AKIASYLFRR7TV66IK4F6"
+    secret_key="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"
 }
 resource "aws_ec2_instance" "linux_server"{
     ami=""
