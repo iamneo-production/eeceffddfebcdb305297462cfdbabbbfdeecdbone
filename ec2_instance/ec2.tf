@@ -1,12 +1,21 @@
-terraform{
-    required_providers{
-        aws={
-            source="hashicorp/aws"
-            version="~>4.0"
-        }
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
     }
+  }
 }
-provider "aws"{
-    region="ap-southeast-1"
-    access_key=""
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "ap-southeast-1"
+  access_key = ""
+  secret_key = ""
+}
+
+# Create a VPC
+resource "aws_instance" "linux_server" {
+  ami = "ami-072f48a9ed4f1bbda"
+  instance_type = "t2.micro"
 }
